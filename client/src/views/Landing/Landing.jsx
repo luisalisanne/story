@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
-import NextButton from '../../components/NextButton/NextButton'
 
 import Context from '../../context/Context'
 
