@@ -1,45 +1,30 @@
-import React, {useState, useContext} from 'react'
-// import axios from 'axios'
-// import Context from '../../context/Context'
+import React, {useState, useContext} from 'react';
+import { Link } from 'react-router-dom';
+import Context from '../../context/Context';
 
 export default function Page01() {
 
-    // Import Context data with useContext hook
-    // const result = useContext(Context)
-    // console.log(result)
+    //? useContext
+    const result = useContext(Context)
+    const {data} = result; 
 
-    // useState to update input values
-    const [characterOne, setCharacterOne] = useState('')
+    //? useState to update input values
+    const [charOne, setCharOne] = useState('')
 
-    const onChangeCharacterOne = (e) => {
-        setCharacterOne(e.target.value)
-        console.log('e.target.value: ', e.target.value)
+    const onChangeCharOne = (e) => {
+        setCharOne(e.target.value)
     }
 
     const onClickHandler = (e) => {
-        e.preventDefault()
-        setCharacterOne(characterOne)
-        console.log('Character One:', characterOne)
+        const newObject = data;
+        newObject.characterOne = charOne;
+        result.setDataToLocalStorage(newObject) 
     }
-
-    // const onSubmitHandle = async (e) => {
-    //     e.preventDefault()
-
-    //     try {
-    //         await axios.post("http://localhost:4000/data/addCharNameOne", {
-    //             "characterOne":characterOne
-    //         })
-    //         console.log(characterOne)
-            
-    //     } catch (error) {
-    //         alert(error.message)
-    //     }
-    // }
 
     return (
         <div>
-            <p>One day in summer <input type="text" id="characterOne" value={characterOne} onChange={onChangeCharacterOne} placeholder="Name"></input> was not feeling well.</p>
-            <button onClick={onClickHandler}>Next</button>
+            <p>One day in summer <input type="text" id="characterOne" value={charOne} onChange={onChangeCharOne} placeholder="Name"></input> was not feeling well.</p>
+            <Link to="/page-02"><button onClick={onClickHandler}>Next</button></Link>
         </div>
     )
 }
