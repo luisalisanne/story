@@ -1,10 +1,8 @@
 import React, {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
-
 import Context from '../../context/Context'
 
 // import axios from 'axios'
-// import NextButton from '../../components/NextButton/NextButton'
 
 export default function Landing() {
 
@@ -39,13 +37,9 @@ export default function Landing() {
     }
 
     const onClickHandler = (e) => {
-        // e.preventDefault()
-
         const newObject = data;
         newObject.name = name;
-
         result.setDataToLocalStorage(newObject) 
-
     }
 
     return (

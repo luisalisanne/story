@@ -47,10 +47,7 @@ function App() {
         }
 
         if (localStorage.getItem(storedData) === null) {
-
-          // store data as json object in local storage
-          localStorage.setItem("storedData", JSON.stringify(storedData))
-
+          localStorage.setItem("storedData", JSON.stringify(storedData));
         }
     }
 

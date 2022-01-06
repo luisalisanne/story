@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <header>
-            <p>"The Story" by Arnold Lobel and {data.name}.</p>
+            <p>"The Story" by Arnold Lobel and {data ? data.name : null}.</p>
         </header>
     )
 }

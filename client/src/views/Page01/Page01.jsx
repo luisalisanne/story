@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
+import Counter from '../../components/Counter/Counter';
 import Context from '../../context/Context';
 
 export default function Page01() {
@@ -25,6 +26,7 @@ export default function Page01() {
         <div>
             <p>One day in summer <input type="text" id="characterOne" value={charOne} onChange={onChangeCharOne} placeholder="Name"></input> was not feeling well.</p>
             <Link to="/page-02"><button onClick={onClickHandler}>Next</button></Link>
+            <Counter/>
         </div>
     )
 }

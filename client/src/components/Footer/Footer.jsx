@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export default function Footer(props) {
-    const [page, setPage] = useState(0);
-
+export default function Footer() {
     return (
-        <footer>
-            <p>{page}</p>
-        </footer>
+        <div>
+            
+        </div>
     )
 }
