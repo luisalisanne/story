@@ -8,7 +8,7 @@ export default function Page04() {
     const {data} = useContext(Context)
 
     return (
-        <div>
+        <div className="textContainer">
             <p>{data.characterOne} drank the {data.drink}, and then they said, “Tell me a story while I am resting.”</p>
             <p>“All right,” said {data.characterTwo}. “Let me think of a story to tell you.”</p>
             <p>{data.characterTwo} thought and thought.</p>

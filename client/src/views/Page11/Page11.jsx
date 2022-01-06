@@ -8,7 +8,7 @@ export default function Page11() {
     const {data} = useContext(Context)
 
     return (
-        <div>
+        <div className="textContainer">
 
             <p>They asked their friend {data.characterTwo} the {data.animalTwo} to tell them a story.</p>
             <p>{data.characterTwo} the {data.animalTwo} could not think of a story.</p>

@@ -22,7 +22,7 @@ export default function Page06() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
         <p>“Why are you standing on your {data.objectOne}?" asked {data.characterOne}.</p>
         <p>“I hope that if I stand on my {data.objectOne}, it will help me to think of a story,” said {data.characterTwo}.</p>
         <p>{data.characterTwo} stood on their {data.objectOne} for a long time.</p>

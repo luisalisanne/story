@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+* {
+  font-size: 1.3rem;
+}
+
+header {
+  text-align: end;
+}
+
+body {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.textContainer {
+  margin-top: 20%;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin: 3rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px dotted black;
+    font-family: "Gochi Hand", cursive;
+    color: darkblue;
+    text-align: center;
+  }
+
+  button {
+    background-color: yellow;
+    font-family: serif;
+    margin: 2rem;
+    border: none;
+    padding: 0.4rem 0.8rem;
+  }
+}

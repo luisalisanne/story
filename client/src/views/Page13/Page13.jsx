@@ -8,11 +8,10 @@ export default function Page13() {
     const {data} = useContext(Context)
 
     return (
-        <div>
+        <div className="textContainer">
             <p>How was that, {data.characterTwo}?” said {data.characterOne}.</p>
             <p>But {data.characterTwo} did not answer.</p>
             <p>They had fallen asleep.</p>       
-            <Link to="/page-13"><button>Next</button></Link>
             <Link to="/"><button>Start again</button></Link>
         </div>
     )

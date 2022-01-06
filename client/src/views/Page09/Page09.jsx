@@ -8,7 +8,7 @@ export default function Page09() {
     const {data} = useContext(Context)
 
     return (
-        <div>
+        <div className="textContainer">
             <p>“I am feeling much better now, {data.characterTwo},” said {data.characterOne}.</p>
             <p>“I do not think I need a story anymore.”</p>
             <p>“Then you get out of bed and let me get into it,” said {data.characterTwo}, “because now I feel terrible.”</p>

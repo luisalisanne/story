@@ -43,7 +43,7 @@ export default function Landing() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
             <h1>The Story</h1>
             <h3>by Arnold Lobel and <input type="text" id="name" placeholder="Your Name" value={name} onChange={onChangeName}></input> </h3>
             <Link to="/page-01"><button onClick={onClickHandler}>Next</button></Link>

@@ -22,7 +22,7 @@ export default function Page07() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
             <p>“Why are you pouring {data.liquid} over your head?” asked {data.characterOne}.</p>
             <p>“I hope that if I pour {data.liquid} over my head, it will help me to think of a story,” said {data.characterTwo}.</p>
             <p>{data.characterTwo} poured many glasses of {data.liquid} over their head.</p>

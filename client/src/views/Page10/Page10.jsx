@@ -17,13 +17,13 @@ export default function Page10() {
 
     const onClickHandler = (e) => {
         const newObject = data;
-        newObject.liq = animTwo;
+        newObject.animalTwo = animTwo;
         result.setDataToLocalStorage(newObject) 
     }
 
     return (
-        <div>
-            <p>“Once upon a time,” said {data.characterOne}, “there were two good friends, a {data.animalOne} and a <input type="text" id="objectTwo" value={animTwo} onChange={onChangeAnimTwo} placeholder="object"></input>.</p>
+        <div className="textContainer">
+            <p>“Once upon a time,” said {data.characterOne}, “there were two good friends, a {data.animalOne} and a <input type="text" id="objectTwo" value={animTwo} onChange={onChangeAnimTwo} placeholder="animal"></input>.</p>
             <p>The {data.animalOne} was not feeling well.</p>
 
             <Link to="/page-11"><button onClick={onClickHandler}>Next</button></Link>

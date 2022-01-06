@@ -23,10 +23,9 @@ export default function Page01() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
             <p>One day in summer <input type="text" id="characterOne" value={charOne} onChange={onChangeCharOne} placeholder="Name"></input> was not feeling well.</p>
             <Link to="/page-02"><button onClick={onClickHandler}>Next</button></Link>
-            <Counter/>
         </div>
     )
 }

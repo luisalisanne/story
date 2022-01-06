@@ -22,7 +22,7 @@ export default function Page05() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
 
         <p>“I will go out on the front porch and walk up and down,” said {data.characterTwo}.</p>
         <p>“Perhaps that will help me to think of a story.”</p>

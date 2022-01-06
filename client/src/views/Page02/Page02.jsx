@@ -30,11 +30,10 @@ export default function Page02() {
     }
 
     return (
-        <div>
+        <div className="textContainer">
             <p><input type="text" id="characterOne" value={charTwo} onChange={onChangeCharTwo} placeholder="Name"></input> said, "{data.characterOne}, you are looking quite green."</p>
             <p>"But I always look green", said {data.characterOne}. "I am a <input type="text" id="animalOne" value={animOne} onChange={onChangeAnimOne} placeholder="green animal"></input>."</p>
             <Link to="/page-03"><button onClick={onClickHandler}>Next</button></Link>
-            <Counter/>
         </div>
     )
 }

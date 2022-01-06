@@ -1,6 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {useEffect} from 'react';
 
+// Import scss styles
+import '../src/assets/style.scss'
+
 // Import Context
 import ContextProvider from './context/ContextProvider';
 
