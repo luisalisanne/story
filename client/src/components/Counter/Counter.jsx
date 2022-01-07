@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Context from "../../context/Context";
 
 export default function Counter() {
@@ -8,6 +8,6 @@ export default function Counter() {
 
     return (
             // <p>{currentPage}/13</p>
-            <p>Page {counter}/13</p>
+            <>Page {counter}/13</>
     )
 }

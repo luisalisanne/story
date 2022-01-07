@@ -1,7 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
-import Counter from '../../components/Counter/Counter';
-import Footer from '../../components/Footer/Footer';
 import Context from '../../context/Context';
 
 export default function Page01() {
@@ -21,6 +19,11 @@ export default function Page01() {
         const newObject = data;
         newObject.characterOne = charOne;
         result.setDataToLocalStorage(newObject) 
+        console.log(e.target.value)
+
+        // Counter Test
+        result.setCounter(result.counter + 1)
+        console.log(result.counter)
     }
 
     return (

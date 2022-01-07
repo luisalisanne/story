@@ -20,6 +20,7 @@ export default function ContextProvider({children}) {
     const providedData = {
         setDataToLocalStorage,
         data,
+        setCounter,
         counter     
     }
     
