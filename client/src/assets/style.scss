@@ -52,13 +52,21 @@ main {
   button {
     background-color: yellow;
     font-family: serif;
-    margin: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
     border: none;
     padding: 0.4rem 0.8rem;
   }
 
   .backToStart {
     background-color: pink;
+    margin-top: 8rem;
+    font-size: smaller;
+  }
+
+  .saveStoryBtn {
+    background-color: lightgreen;
+    font-size: smaller;
   }
 }
 

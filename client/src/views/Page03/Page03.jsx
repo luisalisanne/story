@@ -22,7 +22,7 @@ export default function Page03() {
     return (
         <div className="textContainer">
             <p>"Today you look very green, even for a {data.animalOne}", said {data.characterTwo}. “Get into my bed and rest.”</p>
-            <p>{data.characterTwo} made {data.characterOne} a cup of <input type="text" id="characterOne" value={drink} onChange={onChangeDrink} placeholder="drink"></input>.</p>
+            <p>{data.characterTwo} made {data.characterOne} a cup of <input type="text" id="drink" value={drink} onChange={onChangeDrink} placeholder="drink"></input>.</p>
             <Link to="/page-04"><button onClick={onClickHandler}>Next</button></Link>
         </div>
     )

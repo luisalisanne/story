@@ -5,12 +5,12 @@ const userInputSchema = new Schema({
     name:{default:'', type:String, required:true},
     characterOne: {default:'Frog', type:String},
     characterTwo:{default:'Toad', type:String},
-    frog: {default:'frog', type:String},
-    tea: {default:'hot tea', type:String},
-    head: {default:'head', type:String},
-    water: {default:'water', type:String},
-    wall: {default:'wall', type:String},
-    toad: {default:'toad', type:String}
+    drink: {default:'frog', type:String},
+    animalOne: {default:'hot tea', type:String},
+    objectOne: {default:'head', type:String},
+    liquid: {default:'water', type:String},
+    objectTwo: {default:'wall', type:String},
+    animalTwo: {default:'toad', type:String}
 })
 
 const UserInput = model('UserInput', userInputSchema);
