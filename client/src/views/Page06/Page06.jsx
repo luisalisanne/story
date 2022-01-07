@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Page06() {
 
     //? useContext
-    const result = useContext(Context)
-    const {data} = result; 
+    const {data, nextPageButton} = useContext(Context)
 
     //? useState to update input values
     const [liq, setLiq] = useState('')
@@ -15,10 +14,8 @@ export default function Page06() {
         setLiq(e.target.value)
     }
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.liquid = liq;
-        result.setDataToLocalStorage(newObject) 
+    const onClickHandler = () => {
+        nextPageButton('liquid', liq)
     }
 
     return (

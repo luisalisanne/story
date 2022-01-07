@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Page10() {
 
     //? useContext
-    const result = useContext(Context)
-    const {data} = result; 
+    const {data, nextPageButton} = useContext(Context)
 
     //? useState to update input values
     const [animTwo, setAnimTwo] = useState('')
@@ -15,10 +14,8 @@ export default function Page10() {
         setAnimTwo(e.target.value)
     }
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.animalTwo = animTwo;
-        result.setDataToLocalStorage(newObject) 
+    const onClickHandler = () => {
+        nextPageButton('animalTwo', animTwo)
     }
 
     return (

@@ -7,12 +7,29 @@ export default function ContextProvider({children}) {
 
     // State variable that will be needed by several components and views to store user inputs
     const [data, setData] = useState(JSON.parse(localStorage.getItem("storedData")) || null)
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState('');
 
     // updating the data
     const setDataToLocalStorage = (storedData) => {
             localStorage.setItem("storedData", JSON.stringify(storedData));
             setData(storedData)
+    }
+
+    //? NEXT PAGE BUTTON CENTRAL LOGIC TO UPDATE DATA IN LOCAL STORAGE
+
+    const nextPageButton = (objectKey, newValue) => {
+        const newObject = data;
+        // console.log('New object before updating (cloned data object): ', newObject);
+        // console.log('objectKey: ', objectKey);
+        // console.log('newValue:', newValue);
+
+        // If there is a user input, update the object:
+        if(newValue) {
+        newObject[objectKey] = newValue;
+        // console.log('newObject[objectKey]: ', newObject[objectKey])
+        setDataToLocalStorage(newObject);
+        // console.log('Object after updating: ', data)
+        }
     }
 
     // Data that will be provided as an object
@@ -21,11 +38,11 @@ export default function ContextProvider({children}) {
         setDataToLocalStorage,
         data,
         setCounter,
-        counter     
+        counter,
+        nextPageButton     
     }
     
     return (
         <Context.Provider value={providedData}>{children}</Context.Provider>
     )
 }
-

@@ -5,26 +5,18 @@ import Context from '../../context/Context';
 export default function Page01() {
 
     //? useContext
-    const result = useContext(Context)
-    const {data} = result; 
+    const {nextPageButton} = useContext(Context);
 
     //? useState to update input values
-    const [charOne, setCharOne] = useState('')
+    const [charOne, setCharOne] = useState('');
 
     const onChangeCharOne = (e) => {
         setCharOne(e.target.value)
-    }
+    };
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.characterOne = charOne;
-        result.setDataToLocalStorage(newObject) 
-        console.log(e.target.value)
-
-        // Counter Test
-        result.setCounter(result.counter + 1)
-        console.log(result.counter)
-    }
+    const onClickHandler = () => {
+        nextPageButton('characterOne', charOne)
+    };
 
     return (
         <div className="textContainer">

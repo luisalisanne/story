@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react'
 import { Link } from 'react-router-dom';
-import Counter from '../../components/Counter/Counter';
 import Context from '../../context/Context';
 
 export default function Page03() {
@@ -16,10 +15,8 @@ export default function Page03() {
         setDrink(e.target.value)
     }
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.drink = drink;
-        result.setDataToLocalStorage(newObject) 
+    const onClickHandler = () => {
+        result.nextPageButton('drink', drink)
     }
 
     return (

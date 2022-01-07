@@ -7,7 +7,7 @@ export default function Page02() {
     //? useContext
     const result = useContext(Context)
     const {data} = result; 
-    console.log(data)
+    // console.log(data)
 
     //? useState to update input values
     const [charTwo, setCharTwo] = useState('');
@@ -21,11 +21,9 @@ export default function Page02() {
         setAnimOne(e.target.value)
     }
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.characterTwo = charTwo;
-        newObject.animalOne = animOne;
-        result.setDataToLocalStorage(newObject) 
+     const onClickHandler = () => {
+        result.nextPageButton('characterTwo', charTwo)
+        result.nextPageButton('animalOne', animOne)
     }
 
     return (

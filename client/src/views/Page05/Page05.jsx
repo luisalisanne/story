@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Page05() {
 
     //? useContext
-    const result = useContext(Context)
-    const {data} = result; 
+    const {data, nextPageButton} = useContext(Context); 
 
     //? useState to update input values
     const [objOne, setObjOne] = useState('')
@@ -15,10 +14,8 @@ export default function Page05() {
         setObjOne(e.target.value)
     }
 
-    const onClickHandler = (e) => {
-        const newObject = data;
-        newObject.objectOne = objOne;
-        result.setDataToLocalStorage(newObject) 
+    const onClickHandler = () => {
+        nextPageButton('objectOne', objOne)
     }
 
     return (
