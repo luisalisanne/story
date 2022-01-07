@@ -1,11 +1,10 @@
-import React from 'react'
-import Counter from '../Counter/Counter';
+import CurrentPage from "../CurrentPage/CurrentPage"
 
 export default function Footer() {
 
     return (
         <footer>
-            <p><Counter/></p>
+            <CurrentPage/>
             <p>© Luisa-Lisanne Forck 2022</p>
         </footer>
     )
