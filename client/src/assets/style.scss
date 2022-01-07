@@ -2,13 +2,27 @@
 
 * {
   font-size: 1.3rem;
+  margin: 0;
 }
+
+// HEADER
 
 header {
-  text-align: end;
+  background-color: lightblue;
+  width: 100%;
+  padding: 1rem;
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+  }
 }
 
-body {
+// MAIN
+
+main {
   width: 70%;
   margin: 0 auto;
 }
@@ -24,6 +38,7 @@ body {
 
   p {
     text-align: center;
+    line-height: 3rem;
   }
 
   input {
@@ -40,5 +55,26 @@ body {
     margin: 2rem;
     border: none;
     padding: 0.4rem 0.8rem;
+  }
+
+  .backToStart {
+    background-color: pink;
+  }
+}
+
+// FOOTER
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  background-color: gray;
+  //   border: 4px solid lime;
+
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
   }
 }

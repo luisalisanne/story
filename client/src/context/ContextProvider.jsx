@@ -7,6 +7,7 @@ export default function ContextProvider({children}) {
 
     // State variable that will be needed by several components and views to store user inputs
     const [data, setData] = useState(JSON.parse(localStorage.getItem("storedData")) || null)
+    const [counter, setCounter] = useState(0);
 
     // updating the data
     const setDataToLocalStorage = (storedData) => {
@@ -18,7 +19,8 @@ export default function ContextProvider({children}) {
     // setDtaToLocalStorage Function and data from state variable
     const providedData = {
         setDataToLocalStorage,
-        data     
+        data,
+        counter     
     }
     
     return (

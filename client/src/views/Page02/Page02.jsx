@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
-import Counter from '../../components/Counter/Counter';
 import Context from '../../context/Context';
 
 export default function Page02() {
@@ -31,7 +30,7 @@ export default function Page02() {
 
     return (
         <div className="textContainer">
-            <p><input type="text" id="characterOne" value={charTwo} onChange={onChangeCharTwo} placeholder="Name"></input> said, "{data.characterOne}, you are looking quite green."</p>
+            <p><input type="text" id="characterOne" value={charTwo} onChange={onChangeCharTwo} placeholder="Name (character two)"></input> said, "{data.characterOne}, you are looking quite green."</p>
             <p>"But I always look green", said {data.characterOne}. "I am a <input type="text" id="animalOne" value={animOne} onChange={onChangeAnimOne} placeholder="green animal"></input>."</p>
             <Link to="/page-03"><button onClick={onClickHandler}>Next</button></Link>
         </div>

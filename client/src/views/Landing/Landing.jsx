@@ -39,7 +39,8 @@ export default function Landing() {
     const onClickHandler = (e) => {
         const newObject = data;
         newObject.name = name;
-        result.setDataToLocalStorage(newObject) 
+        result.setDataToLocalStorage(newObject)
+        result.setCounter(result.counter + 1) 
     }
 
     return (

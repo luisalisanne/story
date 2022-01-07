@@ -12,7 +12,7 @@ export default function Page13() {
             <p>How was that, {data.characterTwo}?” said {data.characterOne}.</p>
             <p>But {data.characterTwo} did not answer.</p>
             <p>They had fallen asleep.</p>       
-            <Link to="/"><button>Start again</button></Link>
+            <Link to="/"><button className="backToStart">Start again</button></Link>
         </div>
     )
 }
