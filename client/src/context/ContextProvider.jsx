@@ -5,9 +5,13 @@ import Context from './Context';
 // Destructuring props object to access only children
 export default function ContextProvider({children}) {
 
-    // State variable that will be needed by several components and views to store user inputs
+    // State variables that will be needed by several components and views to store user inputs
+    //? user data object
     const [data, setData] = useState(JSON.parse(localStorage.getItem("storedData")) || null)
+    //? current page counter
     const [counter, setCounter] = useState('');
+    //? user name
+    const [name, setName] = useState('');
 
     // updating the data
     const setDataToLocalStorage = (storedData) => {
@@ -16,7 +20,6 @@ export default function ContextProvider({children}) {
     }
 
     //? NEXT PAGE BUTTON CENTRAL LOGIC TO UPDATE DATA IN LOCAL STORAGE
-
     const nextPageButton = (objectKey, newValue) => {
         const newObject = data;
         // console.log('New object before updating (cloned data object): ', newObject);
@@ -32,9 +35,11 @@ export default function ContextProvider({children}) {
         }
     }
 
-    // Data that will be provided as an object
+    //? Data that will be provided as an object
     // setDtaToLocalStorage Function and data from state variable
     const providedData = {
+        name,
+        setName,
         setDataToLocalStorage,
         data,
         setCounter,
