@@ -12,10 +12,10 @@ export default function CurrentPage() {
     // CONDITIONAL RENDERING to not display the current page on Landing page
 
     if((slicedLocation.includes('/')===false)) {return (
-            <p>{slicedLocation}/13</p>
+            <p className="currentPage">{slicedLocation}/13</p>
     )} else {
         return (
-            <p></p>
+            <p>&#128525;</p>
         )
     }
 }
