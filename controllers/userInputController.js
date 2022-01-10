@@ -1,20 +1,20 @@
-const UserInput = require('../models/UserInput');
+const UserInput = require("../models/UserInput");
 
-// Create a new document 
-// Return test message 
+// Create a new document
+// Return test message
 
 const createDocument = async (req, res) => {
-    const {body} = req;
+  const { body } = req;
 
-    try {
-        const newDocument = await UserInput.create({
-            ...body
-        })
-        return res.status(200).json(newDocument)
-    } catch {
-        return res.status(400).json(error)
-    }
-}
+  try {
+    const newDocument = await UserInput.create({
+      ...body,
+    });
+    return res.status(200).json(newDocument);
+  } catch {
+    return res.status(400).json(error);
+  }
+};
 
 // // Find document by ID and update first character name
 // const addCharNameOne = async (req, res) => {
@@ -25,7 +25,7 @@ const createDocument = async (req, res) => {
 
 //         const addCharName = await UserInput.findByIdAndUpdate(id, {characterOne:charNameOne});
 //         return res.status(200).json(charNameOne)
-        
+
 //     } catch (error) {
 //         return res.status(400).json(error)
 //     }
@@ -40,7 +40,7 @@ const createDocument = async (req, res) => {
 
 //         const addCharName = await UserInput.findByIdAndUpdate(id, {characterTwo:charNameTwo});
 //         return res.status(200).json(charNameTwo)
-        
+
 //     } catch (error) {
 //         return res.status(400).json(error)
 //     }
@@ -55,7 +55,7 @@ const createDocument = async (req, res) => {
 
 //         const updateAnimal = await UserInput.findByIdAndUpdate(id, {frog:animal});
 //         return res.status(200).json(animal)
-        
+
 //     } catch (error) {
 //         return res.status(400).json(error)
 //     }
@@ -73,9 +73,9 @@ const createDocument = async (req, res) => {
 // }
 
 module.exports = {
-    createDocument,
-    addCharNameOne,
-    addCharNameTwo,
-    updateAnimalOne,
-    getDocumentById
-}
+  createDocument,
+  // addCharNameOne,
+  // addCharNameTwo,
+  // updateAnimalOne,
+  // getDocumentById
+};
