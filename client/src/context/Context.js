@@ -1,4 +1,4 @@
-import {createContext} from 'react';
+import { createContext } from "react";
 
 // State Management to handle user inputs and access them from all the components
 // Defining the Context with the createContext function
@@ -8,4 +8,3 @@ import {createContext} from 'react';
 const Context = createContext(null);
 
 export default Context;
-
