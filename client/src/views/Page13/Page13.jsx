@@ -15,7 +15,9 @@ export default function Page13() {
       <p>But {data.characterTwo} did not answer.</p>
       <p>They had fallen asleep.</p>
       <Link to="/">
-        <button className="backToStart">Start again</button>
+        <button className="backToStart" onClick={localStorage.clear()}>
+          Start again
+        </button>
       </Link>
       <StorySaver />
     </div>

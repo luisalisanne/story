@@ -24,6 +24,7 @@ export default function StorySaver() {
 
       // localStorage.clear();
       alert("Your story was saved to the database!");
+      localStorage.clear();
     } catch (error) {
       console.log(error);
       alert("Oops, something went wrong ....");
