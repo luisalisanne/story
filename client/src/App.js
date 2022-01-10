@@ -11,6 +11,8 @@ import ContextProvider from "./context/ContextProvider";
 import Header from "./components/Header/Header";
 // import NextButton from "./components/NextButton/NextButton"
 import Footer from "./components/Footer/Footer";
+// Not Found
+import NotFound from "./components/NotFound/NotFound";
 
 // Import Views
 import Landing from "./views/Landing/Landing";
@@ -73,6 +75,7 @@ function App() {
             <Route path="/page-11" element={<Page11 />} />
             <Route path="/page-12" element={<Page12 />} />
             <Route path="/page-13" element={<Page13 />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
